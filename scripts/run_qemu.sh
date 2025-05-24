@@ -8,7 +8,6 @@ MODULE_DIR="$PROJECT_ROOT/src"
 cd "$MODULE_DIR" && make clean QEMU_BUILD=1 && make QEMU_BUILD=1
 
 qemu-system-x86_64 \
-    -enable-kvm -cpu host -smp 2 \
     -m 1G \
     -nographic \
     -kernel "$KERNEL_IMAGE" \
