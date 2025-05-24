@@ -22,7 +22,6 @@ jobs:
           libelf-dev \
           libssl-dev \
           bc \
-          libgelf-dev \
           dwarves \
           wget \
           cpio \
