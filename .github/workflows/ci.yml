@@ -1,0 +1,34 @@
+name: Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          build-essential \
+          qemu-system-x86 \
+          flex \
+          bison \
+          libelf-dev \
+          libssl-dev \
+          bc \
+          libgelf-dev \
+          dwarves \
+          wget \
+          cpio \
+          kmod \
+          dmsetup
+    - name: Build
+      run: |
+        ./scripts/setup_env.sh
+        ./run_qemu.sh
