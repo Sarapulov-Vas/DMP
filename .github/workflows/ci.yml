@@ -30,4 +30,4 @@ jobs:
     - name: Build
       run: |
         ./scripts/setup_env.sh
-        ./run_qemu.sh
+        ./scripts/run_qemu.sh
