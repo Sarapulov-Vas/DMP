@@ -1,3 +1,5 @@
+[![Build](https://github.com/Sarapulov-Vas/DMP/actions/workflows/ci.yml/badge.svg)](https://github.com/Sarapulov-Vas/DMP/actions/workflows/ci.yml)
+
 # DMP
 Модуль ядра ОС linux, который создает виртуальные блочные устройства поверх существующего на базе device mapper и следит за статистикой выполняемых операций на устройстве. Статистика доступна через sysfs модуля.
 
