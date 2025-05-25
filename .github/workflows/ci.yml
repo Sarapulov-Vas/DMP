@@ -16,18 +16,16 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y \
           build-essential \
-          qemu-system-x86 \
           flex \
           bison \
           libelf-dev \
           libssl-dev \
           bc \
           dwarves \
-          wget \
-          cpio \
-          kmod \
-          dmsetup
+          wget
+    - name: Setup environment
+      run: ./scripts/setup_env.sh
     - name: Build
       run: |
-        ./scripts/setup_env.sh
-        ./scripts/run_qemu.sh
+        cd src
+        make QEMU_BUILD=1
